@@ -7,13 +7,77 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10A6EDE0240500DF00EF1AFA /* TUAlbumViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A6EDDF240500DF00EF1AFA /* TUAlbumViewable.swift */; };
+		10A6EDE3240503FB00EF1AFA /* TUAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A6EDE2240503FB00EF1AFA /* TUAlbumCell.swift */; };
+		10A6EDE62405068100EF1AFA /* TUAlbumDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A6EDE52405068100EF1AFA /* TUAlbumDataSource.swift */; };
+		10A6EDEE24050A5100EF1AFA /* TUCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A6EDED24050A5100EF1AFA /* TUCollectionView.swift */; };
+		10A6EDF124051C0400EF1AFA /* TUAlbumPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A6EDF024051C0400EF1AFA /* TUAlbumPresenter.swift */; };
+		10A6EDF424051C4100EF1AFA /* TUAlbumPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A6EDF324051C4100EF1AFA /* TUAlbumPresentable.swift */; };
+		10A6EDF724051CA000EF1AFA /* PresenterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A6EDF624051CA000EF1AFA /* PresenterBuilder.swift */; };
 		10D359D22403A592008CD7DE /* TUAlbumViewer.h in Headers */ = {isa = PBXBuildFile; fileRef = 10D359D02403A592008CD7DE /* TUAlbumViewer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10D359D92403A780008CD7DE /* TUAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D359D82403A780008CD7DE /* TUAlbumViewController.swift */; };
+		10D359DB2403A78F008CD7DE /* TUAlbumViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10D359DA2403A78F008CD7DE /* TUAlbumViewController.storyboard */; };
+		10D359DD2403AB00008CD7DE /* TUAlbumViewerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D359DC2403AB00008CD7DE /* TUAlbumViewerFactory.swift */; };
+		10F5DB7A2405310B0062A1C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F5DB792405310B0062A1C9 /* AppDelegate.swift */; };
+		10F5DB7C2405310B0062A1C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F5DB7B2405310B0062A1C9 /* SceneDelegate.swift */; };
+		10F5DB7E2405310B0062A1C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F5DB7D2405310B0062A1C9 /* ViewController.swift */; };
+		10F5DB812405310B0062A1C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10F5DB7F2405310B0062A1C9 /* Main.storyboard */; };
+		10F5DB832405310B0062A1C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10F5DB822405310B0062A1C9 /* Assets.xcassets */; };
+		10F5DB862405310B0062A1C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10F5DB842405310B0062A1C9 /* LaunchScreen.storyboard */; };
+		10F5DB8C240532500062A1C9 /* TUAlbumViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10D359CD2403A592008CD7DE /* TUAlbumViewer.framework */; };
+		10F5DB8D240532500062A1C9 /* TUAlbumViewer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10D359CD2403A592008CD7DE /* TUAlbumViewer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		10F5DB9224055F050062A1C9 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10F5DB9124055F050062A1C9 /* Image.xcassets */; };
+		10F5DB94240571190062A1C9 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F5DB93240571190062A1C9 /* ShadowView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		10F5DB8E240532500062A1C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10D359C42403A592008CD7DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10D359CC2403A592008CD7DE;
+			remoteInfo = TUAlbumViewer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		10F5DB90240532500062A1C9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				10F5DB8D240532500062A1C9 /* TUAlbumViewer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		10A6EDDF240500DF00EF1AFA /* TUAlbumViewable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUAlbumViewable.swift; sourceTree = "<group>"; };
+		10A6EDE2240503FB00EF1AFA /* TUAlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUAlbumCell.swift; sourceTree = "<group>"; };
+		10A6EDE52405068100EF1AFA /* TUAlbumDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUAlbumDataSource.swift; sourceTree = "<group>"; };
+		10A6EDED24050A5100EF1AFA /* TUCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUCollectionView.swift; sourceTree = "<group>"; };
+		10A6EDF024051C0400EF1AFA /* TUAlbumPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUAlbumPresenter.swift; sourceTree = "<group>"; };
+		10A6EDF324051C4100EF1AFA /* TUAlbumPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUAlbumPresentable.swift; sourceTree = "<group>"; };
+		10A6EDF624051CA000EF1AFA /* PresenterBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterBuilder.swift; sourceTree = "<group>"; };
 		10D359CD2403A592008CD7DE /* TUAlbumViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TUAlbumViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10D359D02403A592008CD7DE /* TUAlbumViewer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TUAlbumViewer.h; sourceTree = "<group>"; };
 		10D359D12403A592008CD7DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10D359D82403A780008CD7DE /* TUAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUAlbumViewController.swift; sourceTree = "<group>"; };
+		10D359DA2403A78F008CD7DE /* TUAlbumViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TUAlbumViewController.storyboard; sourceTree = "<group>"; };
+		10D359DC2403AB00008CD7DE /* TUAlbumViewerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUAlbumViewerFactory.swift; sourceTree = "<group>"; };
+		10F5DB772405310B0062A1C9 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		10F5DB792405310B0062A1C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		10F5DB7B2405310B0062A1C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		10F5DB7D2405310B0062A1C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		10F5DB802405310B0062A1C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		10F5DB822405310B0062A1C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		10F5DB852405310B0062A1C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		10F5DB872405310B0062A1C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10F5DB9124055F050062A1C9 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
+		10F5DB93240571190062A1C9 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,14 +88,75 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		10F5DB742405310B0062A1C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10F5DB8C240532500062A1C9 /* TUAlbumViewer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10A6EDE1240500E200EF1AFA /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				10A6EDDF240500DF00EF1AFA /* TUAlbumViewable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		10A6EDE4240503FE00EF1AFA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				10A6EDE2240503FB00EF1AFA /* TUAlbumCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		10A6EDE72405068500EF1AFA /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				10A6EDE52405068100EF1AFA /* TUAlbumDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		10A6EDEF24050A5500EF1AFA /* CustomClass */ = {
+			isa = PBXGroup;
+			children = (
+				10A6EDED24050A5100EF1AFA /* TUCollectionView.swift */,
+				10F5DB93240571190062A1C9 /* ShadowView.swift */,
+			);
+			path = CustomClass;
+			sourceTree = "<group>";
+		};
+		10A6EDF224051C0700EF1AFA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				10A6EDF524051C4500EF1AFA /* Protocol */,
+				10A6EDF624051CA000EF1AFA /* PresenterBuilder.swift */,
+				10A6EDF024051C0400EF1AFA /* TUAlbumPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		10A6EDF524051C4500EF1AFA /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				10A6EDF324051C4100EF1AFA /* TUAlbumPresentable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		10D359C32403A592008CD7DE = {
 			isa = PBXGroup;
 			children = (
 				10D359CF2403A592008CD7DE /* TUAlbumViewer */,
+				10F5DB782405310B0062A1C9 /* Demo */,
 				10D359CE2403A592008CD7DE /* Products */,
+				10F5DB8B240532500062A1C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -39,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				10D359CD2403A592008CD7DE /* TUAlbumViewer.framework */,
+				10F5DB772405310B0062A1C9 /* Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -47,9 +173,55 @@
 			isa = PBXGroup;
 			children = (
 				10D359D02403A592008CD7DE /* TUAlbumViewer.h */,
+				10A6EDEF24050A5500EF1AFA /* CustomClass */,
+				10A6EDF224051C0700EF1AFA /* Presenter */,
+				10A6EDE72405068500EF1AFA /* DataSource */,
+				10A6EDE4240503FE00EF1AFA /* View */,
+				10D359DE2403AB60008CD7DE /* ViewController */,
+				10D359DF2403AB66008CD7DE /* Storyboard */,
 				10D359D12403A592008CD7DE /* Info.plist */,
+				10F5DB9124055F050062A1C9 /* Image.xcassets */,
 			);
 			path = TUAlbumViewer;
+			sourceTree = "<group>";
+		};
+		10D359DE2403AB60008CD7DE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				10A6EDE1240500E200EF1AFA /* Protocol */,
+				10D359DC2403AB00008CD7DE /* TUAlbumViewerFactory.swift */,
+				10D359D82403A780008CD7DE /* TUAlbumViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		10D359DF2403AB66008CD7DE /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				10D359DA2403A78F008CD7DE /* TUAlbumViewController.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		10F5DB782405310B0062A1C9 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				10F5DB792405310B0062A1C9 /* AppDelegate.swift */,
+				10F5DB7B2405310B0062A1C9 /* SceneDelegate.swift */,
+				10F5DB7D2405310B0062A1C9 /* ViewController.swift */,
+				10F5DB7F2405310B0062A1C9 /* Main.storyboard */,
+				10F5DB822405310B0062A1C9 /* Assets.xcassets */,
+				10F5DB842405310B0062A1C9 /* LaunchScreen.storyboard */,
+				10F5DB872405310B0062A1C9 /* Info.plist */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		10F5DB8B240532500062A1C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,16 +256,40 @@
 			productReference = 10D359CD2403A592008CD7DE /* TUAlbumViewer.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		10F5DB762405310B0062A1C9 /* Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10F5DB8A2405310B0062A1C9 /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildPhases = (
+				10F5DB732405310B0062A1C9 /* Sources */,
+				10F5DB742405310B0062A1C9 /* Frameworks */,
+				10F5DB752405310B0062A1C9 /* Resources */,
+				10F5DB90240532500062A1C9 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10F5DB8F240532500062A1C9 /* PBXTargetDependency */,
+			);
+			name = Demo;
+			productName = Demo;
+			productReference = 10F5DB772405310B0062A1C9 /* Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		10D359C42403A592008CD7DE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Tadasuke Uema";
 				TargetAttributes = {
 					10D359CC2403A592008CD7DE = {
+						CreatedOnToolsVersion = 11.2.1;
+						LastSwiftMigration = 1120;
+					};
+					10F5DB762405310B0062A1C9 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
 				};
@@ -112,6 +308,7 @@
 			projectRoot = "";
 			targets = (
 				10D359CC2403A592008CD7DE /* TUAlbumViewer */,
+				10F5DB762405310B0062A1C9 /* Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -121,6 +318,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10D359DB2403A78F008CD7DE /* TUAlbumViewController.storyboard in Resources */,
+				10F5DB9224055F050062A1C9 /* Image.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10F5DB752405310B0062A1C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10F5DB862405310B0062A1C9 /* LaunchScreen.storyboard in Resources */,
+				10F5DB832405310B0062A1C9 /* Assets.xcassets in Resources */,
+				10F5DB812405310B0062A1C9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,10 +340,57 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10A6EDE0240500DF00EF1AFA /* TUAlbumViewable.swift in Sources */,
+				10A6EDEE24050A5100EF1AFA /* TUCollectionView.swift in Sources */,
+				10A6EDF724051CA000EF1AFA /* PresenterBuilder.swift in Sources */,
+				10A6EDF424051C4100EF1AFA /* TUAlbumPresentable.swift in Sources */,
+				10F5DB94240571190062A1C9 /* ShadowView.swift in Sources */,
+				10D359D92403A780008CD7DE /* TUAlbumViewController.swift in Sources */,
+				10A6EDE62405068100EF1AFA /* TUAlbumDataSource.swift in Sources */,
+				10A6EDF124051C0400EF1AFA /* TUAlbumPresenter.swift in Sources */,
+				10A6EDE3240503FB00EF1AFA /* TUAlbumCell.swift in Sources */,
+				10D359DD2403AB00008CD7DE /* TUAlbumViewerFactory.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10F5DB732405310B0062A1C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10F5DB7E2405310B0062A1C9 /* ViewController.swift in Sources */,
+				10F5DB7A2405310B0062A1C9 /* AppDelegate.swift in Sources */,
+				10F5DB7C2405310B0062A1C9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		10F5DB8F240532500062A1C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10D359CC2403A592008CD7DE /* TUAlbumViewer */;
+			targetProxy = 10F5DB8E240532500062A1C9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		10F5DB7F2405310B0062A1C9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10F5DB802405310B0062A1C9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		10F5DB842405310B0062A1C9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				10F5DB852405310B0062A1C9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		10D359D32403A592008CD7DE /* Debug */ = {
@@ -188,7 +444,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -245,7 +501,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -260,6 +516,8 @@
 		10D359D62403A592008CD7DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = YM26QCPS23;
@@ -268,6 +526,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = TUAlbumViewer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -276,14 +535,18 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.tu.tualbumviewer.TUAlbumViewer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		10D359D72403A592008CD7DE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = YM26QCPS23;
@@ -292,6 +555,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = TUAlbumViewer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,6 +564,45 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.tu.tualbumviewer.TUAlbumViewer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		10F5DB882405310B0062A1C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YM26QCPS23;
+				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.tu.tualbumviewer.Demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		10F5DB892405310B0062A1C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = YM26QCPS23;
+				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = jp.tu.tualbumviewer.Demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -322,6 +625,15 @@
 			buildConfigurations = (
 				10D359D62403A592008CD7DE /* Debug */,
 				10D359D72403A592008CD7DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10F5DB8A2405310B0062A1C9 /* Build configuration list for PBXNativeTarget "Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10F5DB882405310B0062A1C9 /* Debug */,
+				10F5DB892405310B0062A1C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
