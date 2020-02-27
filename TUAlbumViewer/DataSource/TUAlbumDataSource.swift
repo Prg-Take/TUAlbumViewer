@@ -18,23 +18,20 @@ protocol TUAlbumDataSourceDelegate: AnyObject {
     func reloadItems(indexPaths: [IndexPath])
     func moveItem(fromIndex: Int, toIndex: Int)
     func reloadData()
+    func showDeniedAlert()
 
 }
 
 class TUAlbumDataSource: NSObject {
 
     private let cachingImageManager = PHCachingImageManager()
-    private var fetchResult: PHFetchResult<PHAsset>
+    private var fetchResult = PHFetchResult<PHAsset>()
     private var thumbnailSize = CGSize(width: 500.0, height: 500.0)
     private var maxSelected: Int?
     private let oneSide = CGFloat(roundf(Float(UIScreen.main.bounds.width / 3))) - 1.0
     weak var delegate: TUAlbumDataSourceDelegate?
 
-    override init() {
-        let options = PHFetchOptions()
-        options.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
-        self.fetchResult = PHAsset.fetchAssets(with: options)
-    }
+    override init() {}
 
     deinit {
         #if DEBUG
@@ -47,6 +44,26 @@ class TUAlbumDataSource: NSObject {
     func setup(thumbnailSize: CGSize, maxSelected: Int?) {
         self.thumbnailSize = thumbnailSize
         self.maxSelected = maxSelected
+    }
+
+    func setupFetchResult(completion: @escaping (() -> ())) {
+        if PHPhotoLibrary.authorizationStatus() == .authorized {
+            let options = PHFetchOptions()
+            options.predicate = NSPredicate(format: "mediaType == \(PHAssetMediaType.image.rawValue)")
+            options.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
+            self.fetchResult = PHAsset.fetchAssets(with: options)
+            completion()
+            return
+        }
+        PHPhotoLibrary.requestAuthorization { [weak self] requestResult in
+            if requestResult == .authorized {
+                self?.setupFetchResult(completion: completion)
+            } else {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                    self?.delegate?.showDeniedAlert()
+                })
+            }
+        }
     }
 
     func updateCachedAssets(collectionView: TUCollectionView) {

@@ -15,9 +15,8 @@
 		10A6EDF424051C4100EF1AFA /* TUAlbumPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A6EDF324051C4100EF1AFA /* TUAlbumPresentable.swift */; };
 		10A6EDF724051CA000EF1AFA /* PresenterBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A6EDF624051CA000EF1AFA /* PresenterBuilder.swift */; };
 		10D359D22403A592008CD7DE /* TUAlbumViewer.h in Headers */ = {isa = PBXBuildFile; fileRef = 10D359D02403A592008CD7DE /* TUAlbumViewer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		10D359D92403A780008CD7DE /* TUAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D359D82403A780008CD7DE /* TUAlbumViewController.swift */; };
-		10D359DB2403A78F008CD7DE /* TUAlbumViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10D359DA2403A78F008CD7DE /* TUAlbumViewController.storyboard */; };
-		10D359DD2403AB00008CD7DE /* TUAlbumViewerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D359DC2403AB00008CD7DE /* TUAlbumViewerFactory.swift */; };
+		10D359D92403A780008CD7DE /* TUAlbumViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D359D82403A780008CD7DE /* TUAlbumViewerController.swift */; };
+		10D359DB2403A78F008CD7DE /* TUAlbumViewerController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10D359DA2403A78F008CD7DE /* TUAlbumViewerController.storyboard */; };
 		10F5DB9224055F050062A1C9 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10F5DB9124055F050062A1C9 /* Image.xcassets */; };
 		10F5DB94240571190062A1C9 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F5DB93240571190062A1C9 /* ShadowView.swift */; };
 /* End PBXBuildFile section */
@@ -33,9 +32,8 @@
 		10D359CD2403A592008CD7DE /* TUAlbumViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TUAlbumViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10D359D02403A592008CD7DE /* TUAlbumViewer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TUAlbumViewer.h; sourceTree = "<group>"; };
 		10D359D12403A592008CD7DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		10D359D82403A780008CD7DE /* TUAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUAlbumViewController.swift; sourceTree = "<group>"; };
-		10D359DA2403A78F008CD7DE /* TUAlbumViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TUAlbumViewController.storyboard; sourceTree = "<group>"; };
-		10D359DC2403AB00008CD7DE /* TUAlbumViewerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUAlbumViewerFactory.swift; sourceTree = "<group>"; };
+		10D359D82403A780008CD7DE /* TUAlbumViewerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TUAlbumViewerController.swift; sourceTree = "<group>"; };
+		10D359DA2403A78F008CD7DE /* TUAlbumViewerController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TUAlbumViewerController.storyboard; sourceTree = "<group>"; };
 		10F5DB9124055F050062A1C9 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		10F5DB93240571190062A1C9 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,8 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				10A6EDE1240500E200EF1AFA /* Protocol */,
-				10D359DC2403AB00008CD7DE /* TUAlbumViewerFactory.swift */,
-				10D359D82403A780008CD7DE /* TUAlbumViewController.swift */,
+				10D359D82403A780008CD7DE /* TUAlbumViewerController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -148,7 +145,7 @@
 		10D359DF2403AB66008CD7DE /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				10D359DA2403A78F008CD7DE /* TUAlbumViewController.storyboard */,
+				10D359DA2403A78F008CD7DE /* TUAlbumViewerController.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -231,7 +228,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10D359DB2403A78F008CD7DE /* TUAlbumViewController.storyboard in Resources */,
+				10D359DB2403A78F008CD7DE /* TUAlbumViewerController.storyboard in Resources */,
 				10F5DB9224055F050062A1C9 /* Image.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,11 +245,10 @@
 				10A6EDF724051CA000EF1AFA /* PresenterBuilder.swift in Sources */,
 				10A6EDF424051C4100EF1AFA /* TUAlbumPresentable.swift in Sources */,
 				10F5DB94240571190062A1C9 /* ShadowView.swift in Sources */,
-				10D359D92403A780008CD7DE /* TUAlbumViewController.swift in Sources */,
+				10D359D92403A780008CD7DE /* TUAlbumViewerController.swift in Sources */,
 				10A6EDE62405068100EF1AFA /* TUAlbumDataSource.swift in Sources */,
 				10A6EDF124051C0400EF1AFA /* TUAlbumPresenter.swift in Sources */,
 				10A6EDE3240503FB00EF1AFA /* TUAlbumCell.swift in Sources */,
-				10D359DD2403AB00008CD7DE /* TUAlbumViewerFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +394,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				OTHER_CFLAGS = "-fembed-bitcode";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.tu.tualbumviewer.TUAlbumViewer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -428,6 +425,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				OTHER_CFLAGS = "-fembed-bitcode";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.tu.tualbumviewer.TUAlbumViewer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";

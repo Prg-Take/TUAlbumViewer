@@ -1,5 +1,5 @@
 //
-//  TUAlbumViewController.swift
+//  TUAlbumViewerController.swift
 //  TUAlbumViewer
 //
 //  Created by Tadasuke Uema on 2020/02/24.
@@ -9,7 +9,7 @@
 import UIKit
 import Photos
 
-public class TUAlbumViewController: UIViewController {
+public class TUAlbumViewerController: UIViewController {
 
     @IBOutlet weak var collectionView: TUCollectionView!
     @IBOutlet weak var closeButton: UIButton!
@@ -17,6 +17,16 @@ public class TUAlbumViewController: UIViewController {
     private var dataSource = TUAlbumDataSource()
     private var presenter: TUAlbumPresentable?
     private var getImagesHandler: (([UIImage]) -> ())?
+
+    public static func initWithStoryboard(thumbnailSize: CGSize?,
+                                          maxSelected: Int?,
+                                          getImagesHandler: (([UIImage]) -> ())?) -> TUAlbumViewerController {
+        let storyboard = UIStoryboard(name: String(describing: TUAlbumViewerController.self),
+                                      bundle: Bundle(for: TUAlbumViewerController.self))
+        let vc = storyboard.instantiateInitialViewController() as! TUAlbumViewerController
+        vc.setup(thumbnailSize: thumbnailSize, maxSelected: maxSelected, getImagesHandler: getImagesHandler)
+        return vc
+    }
 
     public override func viewDidLoad() {
         self.presenter = PresenterBuilder().createTUAlbumPresenter(view: self)
@@ -62,7 +72,7 @@ public class TUAlbumViewController: UIViewController {
 
 //MARK: - TUAlbumViewable
 
-extension TUAlbumViewController: TUAlbumViewable {
+extension TUAlbumViewerController: TUAlbumViewable {
 
     func setupObserver() {
         PHPhotoLibrary.shared().register(self)
@@ -80,7 +90,12 @@ extension TUAlbumViewController: TUAlbumViewable {
         self.collectionView.delegate = self.dataSource
         self.collectionView.dataSource = self.dataSource
         self.collectionView.allowsMultipleSelection = true
-        self.collectionView.reloadData()
+        self.dataSource.setupFetchResult(completion: { [weak self] in
+            DispatchQueue.main.async {
+                self?.collectionView.reloadData()
+                self?.scrollToBottom()
+            }
+        })
     }
 
     func scrollToBottom() {
@@ -97,7 +112,7 @@ extension TUAlbumViewController: TUAlbumViewable {
 
 //MARK: - TUAlbumDataSourceDelegate
 
-extension TUAlbumViewController: TUAlbumDataSourceDelegate {
+extension TUAlbumViewerController: TUAlbumDataSourceDelegate {
 
     func tapAlbumCell() {
         var alphaValue: CGFloat = 0.0
@@ -141,11 +156,21 @@ extension TUAlbumViewController: TUAlbumDataSourceDelegate {
         self.collectionView.reloadData()
     }
 
+    func showDeniedAlert() {
+        let alert = UIAlertController(title: "アクセスエラー",
+                                      message: "写真へのアクセスが拒否されています。\n設定画面から許可してください。",
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "閉じる", style: .default, handler: { [weak self] _ in
+            self?.close()
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+
 }
 
 // MARK: PHPhotoLibraryChangeObserver
 
-extension TUAlbumViewController: PHPhotoLibraryChangeObserver {
+extension TUAlbumViewerController: PHPhotoLibraryChangeObserver {
 
     public func photoLibraryDidChange(_ changeInstance: PHChange) {
         self.dataSource.photoLibraryDidChange(changeInstance: changeInstance)
