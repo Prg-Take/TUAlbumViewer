@@ -99,13 +99,15 @@ class TUAlbumDataSource: NSObject {
             completion(images)
             return
         }
+        let options = PHImageRequestOptions()
+        options.deliveryMode = .highQualityFormat
         var completionCount = 0
         for indexPath in indexPaths {
             let asset = self.fetchResult.object(at: indexPath.row)
             self.cachingImageManager.requestImage(for: asset,
-                                                  targetSize: UIScreen.main.bounds.size,
+                                                  targetSize: PHImageManagerMaximumSize,
                                                   contentMode: .aspectFill,
-                                                  options: nil,
+                                                  options: options,
                                                   resultHandler: { image, _ in
                                                     if let image = image {
                                                         images.append(image)
