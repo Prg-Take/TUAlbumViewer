@@ -1,0 +1,11 @@
+framework module TUAlbumViewer {
+  umbrella header "TUAlbumViewer.h"
+
+  export *
+  module * { export * }
+}
+
+module TUAlbumViewer.Swift {
+    header "TUAlbumViewer-Swift.h"
+    requires objc
+}

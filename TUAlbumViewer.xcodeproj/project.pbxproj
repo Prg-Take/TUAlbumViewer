@@ -6,6 +6,20 @@
 	objectVersion = 50;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		10DC277624415BCB00B5E0B3 /* TUAlbumViewer-Universal */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 10DC277924415BCB00B5E0B3 /* Build configuration list for PBXAggregateTarget "TUAlbumViewer-Universal" */;
+			buildPhases = (
+				10DC277A24415BDE00B5E0B3 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "TUAlbumViewer-Universal";
+			productName = "TUAlbumViewer-Universal";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		10A6EDE0240500DF00EF1AFA /* TUAlbumViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A6EDDF240500DF00EF1AFA /* TUAlbumViewable.swift */; };
 		10A6EDE3240503FB00EF1AFA /* TUAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A6EDE2240503FB00EF1AFA /* TUAlbumCell.swift */; };
@@ -203,6 +217,9 @@
 						CreatedOnToolsVersion = 11.2.1;
 						LastSwiftMigration = 1120;
 					};
+					10DC277624415BCB00B5E0B3 = {
+						CreatedOnToolsVersion = 11.4;
+					};
 				};
 			};
 			buildConfigurationList = 10D359C72403A592008CD7DE /* Build configuration list for PBXProject "TUAlbumViewer" */;
@@ -219,6 +236,7 @@
 			projectRoot = "";
 			targets = (
 				10D359CC2403A592008CD7DE /* TUAlbumViewer */,
+				10DC277624415BCB00B5E0B3 /* TUAlbumViewer-Universal */,
 			);
 		};
 /* End PBXProject section */
@@ -234,6 +252,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10DC277A24415BDE00B5E0B3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\nOUTPUT_FOLDER=${PROJECT_DIR}\n\nmake sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n\n#Step1\nxcodebuild BITCODE_GENERATION_MODE=bitcode OTHER_CFLAGS=\"-fembed-bitcode\" -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" -UseModernBuildSystem=NO clean build\n\nxcodebuild BITCODE_GENERATION_MODE=bitcode OTHER_CFLAGS=\"-fembed-bitcode\" -workspace ${PROJECT_NAME}.xcworkspace -scheme ${PROJECT_NAME} ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphonesimulator BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" -UseModernBuildSystem=NO clean build\n\n#Step2\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n\n#Step3\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule/.\" \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/Modules/${PROJECT_NAME}.swiftmodule\"\n\n#Step4\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework/${PROJECT_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework/${PROJECT_NAME}\"\n\n#Step5\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/${PROJECT_NAME}.framework\" \"${OUTPUT_FOLDER}\"\n\n#Step 6\nopen \"${OUTPUT_FOLDER}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		10D359C92403A592008CD7DE /* Sources */ = {
@@ -313,6 +351,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -369,6 +408,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -396,7 +436,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-fembed-bitcode";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.tu.tualbumviewer.TUAlbumViewer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -441,6 +481,22 @@
 			};
 			name = Release;
 		};
+		10DC277724415BCB00B5E0B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		10DC277824415BCB00B5E0B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -458,6 +514,15 @@
 			buildConfigurations = (
 				10D359D62403A592008CD7DE /* Debug */,
 				10D359D72403A592008CD7DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10DC277924415BCB00B5E0B3 /* Build configuration list for PBXAggregateTarget "TUAlbumViewer-Universal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10DC277724415BCB00B5E0B3 /* Debug */,
+				10DC277824415BCB00B5E0B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

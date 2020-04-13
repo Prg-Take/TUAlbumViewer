@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1140"
+   LastUpgradeVersion = "1120"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "10DC277624415BCB00B5E0B3"
-               BuildableName = "TUAlbumViewer-Universal"
-               BlueprintName = "TUAlbumViewer-Universal"
+               BlueprintIdentifier = "10981541243A19DB001ED296"
+               BuildableName = "Test.app"
+               BlueprintName = "Test"
                ReferencedContainer = "container:TUAlbumViewer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,6 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "10981556243A19DC001ED296"
+               BuildableName = "TestTests.xctest"
+               BlueprintName = "TestTests"
+               ReferencedContainer = "container:TUAlbumViewer.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "10981561243A19DC001ED296"
+               BuildableName = "TestUITests.xctest"
+               BlueprintName = "TestUITests"
+               ReferencedContainer = "container:TUAlbumViewer.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -40,6 +60,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "10981541243A19DB001ED296"
+            BuildableName = "Test.app"
+            BlueprintName = "Test"
+            ReferencedContainer = "container:TUAlbumViewer.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -47,15 +77,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "10DC277624415BCB00B5E0B3"
-            BuildableName = "TUAlbumViewer-Universal"
-            BlueprintName = "TUAlbumViewer-Universal"
+            BlueprintIdentifier = "10981541243A19DB001ED296"
+            BuildableName = "Test.app"
+            BlueprintName = "Test"
             ReferencedContainer = "container:TUAlbumViewer.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
