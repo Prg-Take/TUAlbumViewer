@@ -6,11 +6,11 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		rLhr3xpUWRjq/rU7Kxbb3BObXEc=
+		ugMPJPPDC+F6d0H5LR7uIukv24s=
 		</data>
 		<key>Headers/TUAlbumViewer-Swift.h</key>
 		<data>
-		TZUjikL33zb6mIglY/gAKP2I7WE=
+		n5jQowyfqRPeknNJqUlXhKjTEAk=
 		</data>
 		<key>Headers/TUAlbumViewer.h</key>
 		<data>
@@ -18,31 +18,31 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		cy6xx2uMOqd838tiqRjj+kHTKno=
+		iuswo4Bn87fqC15QDH107F9opq8=
 		</data>
 		<key>Modules/TUAlbumViewer.swiftmodule/Project/arm64-apple-ios.swiftsourceinfo</key>
 		<data>
-		xZ3DH1LGk3GgO98P0tsaZectOR8=
+		P3Pehu0fV3G+ApKFxHasvqftlUQ=
 		</data>
 		<key>Modules/TUAlbumViewer.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<data>
-		xZ3DH1LGk3GgO98P0tsaZectOR8=
+		P3Pehu0fV3G+ApKFxHasvqftlUQ=
 		</data>
 		<key>Modules/TUAlbumViewer.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		DeceXmjZrWrhd9TkS9H9MwacbJw=
+		jYL0KiV5HLKtfcphjOif+Xr+q3Y=
 		</data>
 		<key>Modules/TUAlbumViewer.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		2Kpk/cukZWjefNvGhiqvgm2UStk=
+		nqXH+w2XyCry+cuangGy9Jm7/J0=
 		</data>
 		<key>Modules/TUAlbumViewer.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		DeceXmjZrWrhd9TkS9H9MwacbJw=
+		jYL0KiV5HLKtfcphjOif+Xr+q3Y=
 		</data>
 		<key>Modules/TUAlbumViewer.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		2Kpk/cukZWjefNvGhiqvgm2UStk=
+		nqXH+w2XyCry+cuangGy9Jm7/J0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -52,21 +52,13 @@
 		<data>
 		3QD+f3Wu3KYlyBUG96aIy/D79xM=
 		</data>
-		<key>TUAlbumViewerController.storyboardc/Nu0-UQ-zOr-view-XG1-I3-SpU.nib/objects-12.3+.nib</key>
+		<key>TUAlbumViewerController.storyboardc/Nu0-UQ-zOr-view-XG1-I3-SpU.nib</key>
 		<data>
-		oKTymElFtaIYI6nL6H5psRMspug=
+		tuEhrXAEXYq3sfd+Q/6FCU2GDc0=
 		</data>
-		<key>TUAlbumViewerController.storyboardc/Nu0-UQ-zOr-view-XG1-I3-SpU.nib/runtime.nib</key>
+		<key>TUAlbumViewerController.storyboardc/UIViewController-Nu0-UQ-zOr.nib</key>
 		<data>
-		13P4HOi9RcojtjT7jw8V4R+wqAE=
-		</data>
-		<key>TUAlbumViewerController.storyboardc/UIViewController-Nu0-UQ-zOr.nib/objects-12.3+.nib</key>
-		<data>
-		lFNw9AEZv2oG6GRO1fFiUT+AIng=
-		</data>
-		<key>TUAlbumViewerController.storyboardc/UIViewController-Nu0-UQ-zOr.nib/runtime.nib</key>
-		<data>
-		TZVaC014aor8i0Pgb6uXbiRowX8=
+		YllD5FJnv+edYU2YeekoRBd9HMA=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -75,14 +67,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jHMhcF4aGn/SpASrDORMclfHvR5my51jwSgty4G94jY=
+			21Aamgu9hBR/vbD224SCgVSNWIFS9EudZlX0QRQoDEo=
 			</data>
 		</dict>
 		<key>Headers/TUAlbumViewer-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4v6mT4ekoJ0WWo/TweJC3C+qU/+SYQD7iiYxZcEhl4Q=
+			LHJOJ3lxHetg+OESggujceLfjBwrDX2WKhP3W6S5xTw=
 			</data>
 		</dict>
 		<key>Headers/TUAlbumViewer.h</key>
@@ -96,42 +88,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bJmorsyfTpE3IVlWXsfDUknyc+Y655iAEEha6fxNr8Q=
+			T77E1m93sP/PXNc/y3wje5CVvCpHHiJBZGK/wQ2b3Kw=
 			</data>
 		</dict>
 		<key>Modules/TUAlbumViewer.swiftmodule/Project/arm64.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bJmorsyfTpE3IVlWXsfDUknyc+Y655iAEEha6fxNr8Q=
+			T77E1m93sP/PXNc/y3wje5CVvCpHHiJBZGK/wQ2b3Kw=
 			</data>
 		</dict>
 		<key>Modules/TUAlbumViewer.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rkhnhPXNQFjYIzpk3oh27nzdrLushfRp6qz1GCcXon8=
+			buT1YYxoVSCoP0Gb8PtDX3E24Blq5aIIs3vIbwg4+sg=
 			</data>
 		</dict>
 		<key>Modules/TUAlbumViewer.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			m0Ut/5PnQl3eZZC8Rqvs+tGiPAEWZNoHcyExoJMFc3s=
+			YXTCBNlzspyCAJwMXvUtpft/oY5Gp54cF0my4hvo/dQ=
 			</data>
 		</dict>
 		<key>Modules/TUAlbumViewer.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rkhnhPXNQFjYIzpk3oh27nzdrLushfRp6qz1GCcXon8=
+			buT1YYxoVSCoP0Gb8PtDX3E24Blq5aIIs3vIbwg4+sg=
 			</data>
 		</dict>
 		<key>Modules/TUAlbumViewer.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			m0Ut/5PnQl3eZZC8Rqvs+tGiPAEWZNoHcyExoJMFc3s=
+			YXTCBNlzspyCAJwMXvUtpft/oY5Gp54cF0my4hvo/dQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -148,32 +140,18 @@
 			r/NLBc7Zvezill4E0NbteyXwlq8gvQaab6QDOz/W5p4=
 			</data>
 		</dict>
-		<key>TUAlbumViewerController.storyboardc/Nu0-UQ-zOr-view-XG1-I3-SpU.nib/objects-12.3+.nib</key>
+		<key>TUAlbumViewerController.storyboardc/Nu0-UQ-zOr-view-XG1-I3-SpU.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MaB2XMwToDHDo56TLAO43rL6BDkjjYPi7XAjT+eQ5xw=
+			y0f8t1423BpR70vf8yDQWfsNIw/g9cJ4CH7u/k8Qg7g=
 			</data>
 		</dict>
-		<key>TUAlbumViewerController.storyboardc/Nu0-UQ-zOr-view-XG1-I3-SpU.nib/runtime.nib</key>
+		<key>TUAlbumViewerController.storyboardc/UIViewController-Nu0-UQ-zOr.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZU5klWyzCOnD0YCG9UdO5pwgngxqsE+DGNv8/Vh6zbk=
-			</data>
-		</dict>
-		<key>TUAlbumViewerController.storyboardc/UIViewController-Nu0-UQ-zOr.nib/objects-12.3+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			4gWH/x/KmZw4YZMO/7E73xhwgTNBaUkE0HnUAx1tAOg=
-			</data>
-		</dict>
-		<key>TUAlbumViewerController.storyboardc/UIViewController-Nu0-UQ-zOr.nib/runtime.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			j5ZvZzrqE1CD83JllfTZpvEsh4WHr4j83nIIl7D4Ds8=
+			sQlbbCxfL56jA21ZE80NrCT2AcKglBLub/72F+82xQI=
 			</data>
 		</dict>
 	</dict>

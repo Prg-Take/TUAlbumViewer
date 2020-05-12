@@ -14,6 +14,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "10D359CC2403A592008CD7DE"
+               BuildableName = "TUAlbumViewer.framework"
+               BlueprintName = "TUAlbumViewer"
+               ReferencedContainer = "container:TUAlbumViewer.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "10DC277624415BCB00B5E0B3"
                BuildableName = "TUAlbumViewer-Universal"
                BlueprintName = "TUAlbumViewer-Universal"
