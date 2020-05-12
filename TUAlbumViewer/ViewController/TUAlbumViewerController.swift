@@ -22,7 +22,7 @@ public class TUAlbumViewerController: UIViewController {
                                           maxSelected: Int?,
                                           getImagesHandler: (([UIImage]) -> ())?) -> TUAlbumViewerController {
         let storyboard = UIStoryboard(name: String(describing: TUAlbumViewerController.self),
-                                      bundle: Bundle(for: TUAlbumViewerController.self))
+                                      bundle: Bundle(identifier: "jp.tu.tualbumviewer.TUAlbumViewer"))
         let vc = storyboard.instantiateInitialViewController() as! TUAlbumViewerController
         vc.setup(thumbnailSize: thumbnailSize, maxSelected: maxSelected, getImagesHandler: getImagesHandler)
         return vc
